@@ -54,12 +54,11 @@ class AppUninstalledJob implements ShouldQueue
      */
     public function __construct(
         ShopDomain $domain,
-        stdClass $data,
-        callable $cancelCurrentPlanAction
+        stdClass $data
     ) {
         $this->domain = $domain;
         $this->data = $data;
-        $this->cancelCurrentPlanAction = $cancelCurrentPlanAction;
+        //$this->cancelCurrentPlanAction = $cancelCurrentPlanAction;
     }
 
     /**
