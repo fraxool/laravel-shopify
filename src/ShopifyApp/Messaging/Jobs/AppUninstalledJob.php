@@ -76,7 +76,7 @@ class AppUninstalledJob implements ShouldQueue
         $shopId = $shop->getId();
 
         // Cancel the current plan
-        call_user_func($this->cancelCurrentPlanAction, $shopId);
+        //call_user_func($this->cancelCurrentPlanAction, $shopId);
         
         // Purge shop of token, plan, etc.
         $shopCommand->clean($shopId);
