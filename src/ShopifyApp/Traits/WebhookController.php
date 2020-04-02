@@ -30,8 +30,7 @@ trait WebhookController
 
         $jobClass::dispatch(
             new ShopDomain($request->header('x-shopify-shop-domain')),
-            $jobData,
-            null
+            $jobData
         );
 
         return Response::make('', 201);
